@@ -1,0 +1,13 @@
+html
+  head
+  body
+    .card.mt-5(style='margin:auto;width: 600px;')
+      .card-body
+        h5.card-title Login
+        .form-group
+          label(for='email') Email
+          input.form-control#email(type='text', placeholder='Email Address', [(ngModel)]='email')
+        .form-group
+          label(for='email') Password
+          input.form-control#password(type='password', placeholder='Password', [(ngModel)]='password')
+        button.btn.btn-primary(type='submit', (click)='tryLogin()') Login
