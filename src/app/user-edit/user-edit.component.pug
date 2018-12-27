@@ -1,0 +1,28 @@
+h2 Account
+hr
+
+label(for="user") User
+  input(type="text", id="user", placeholder="user name")
+label(for="email") User
+  input(type="text", id="email", placeholder="email address")
+label(for="name") User
+  input(type="text", id="name", placeholder="full name")
+
+h2 Preffered language
+hr
+select(name="language")
+
+h2 Personal information (optional)
+hr
+label(for="country") User
+ select(name="language", id="country")
+label(for="city") City
+  select(name="city", id="city")
+label(for="age") Age
+  select(name="age", id="age")
+label(for="user") User
+  select(name="language", id="user")
+
+hr
+
+dual-list([source]="source" [(destination)]="confirmed")
