@@ -14,6 +14,7 @@ import { LoginComponent } from './login/login.component';
 import { NeedAuthGuard } from './auth.guard';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ReservationsComponent } from './reservations/reservations.component';
 
 
 const appRoutes: Routes = [
@@ -31,6 +32,10 @@ const appRoutes: Routes = [
     path: 'login',
     component: LoginComponent
   },
+  {
+    path: 'reservations',
+    component: ReservationsComponent
+  },
   { path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full'
@@ -42,7 +47,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     UserEditComponent,
-    NavbarComponent
+    NavbarComponent,
+    ReservationsComponent
   ],
   imports: [
     BrowserModule,
