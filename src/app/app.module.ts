@@ -4,6 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AngularDualListBoxModule } from 'angular-dual-listbox';
+import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
 
 import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
@@ -48,7 +49,8 @@ const appRoutes: Routes = [
     DashboardModule,
     FormsModule,
     HttpClientModule,
-    AngularDualListBoxModule
+    AngularDualListBoxModule,
+    DlDateTimePickerDateModule
   ],
   providers: [
     NeedAuthGuard
