@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { NeedAuthGuard } from './auth.guard';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 const appRoutes: Routes = [
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    UserEditComponent
+    UserEditComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
