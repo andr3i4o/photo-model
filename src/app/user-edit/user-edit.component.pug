@@ -1,30 +1,58 @@
-h2 Account
-hr
+form.needs-validation(#userEdit="ngForm", novalidate)
+  .container
+    h4 Account
+    hr
+    .row
+      .col-8
+        .row
+          .col-6.mb-4
+            label(for="user") User
+          .col-6
+            input(type="text", name="user", id="user", class="form-control", placeholder="user name", [(ngModel)]="user.user")
+          .col-6.mb-4
+            label(for="email") Email
+          .col-6
+            input(type="text", name="email", id="email", class="form-control", placeholder="email address", [(ngModel)]="user.email")
+          .col-6.mb-4
+            label(for="name") Full Name
+          .col-6
+            input(type="text", name="fullname", id="name", class="form-control", placeholder="full name", [(ngModel)]="user.fullname")
 
-label(for="user") User
-  input(type="text", id="user", placeholder="user name", [(ngModel)]="user.user")
-label(for="email") Email
-  input(type="text", id="email", placeholder="email address", [(ngModel)]="user.email")
-label(for="name") Full Name
-  input(type="text", id="name", placeholder="full name", [(ngModel)]="user.fullname")
+    h4 Preffered language
+    hr
+    .row
+      .col-8
+        .row
+          .col-6.mb-4
+            label(for="language") Language
+          .col-6
+            select(name="language", class="custom-select d-block", [(ngModel)]="user.language")
+              option(*ngFor="let lg of languages", [value]="lg") {{lg}}
 
-h2 Preffered language
-hr
-select(name="language")
+    h4 Personal information (optional)
+    hr
+    .row
+      .col-8
+        .row
+          .col-6.mb-4
+            label(for="country") Country
+          .col-6
+            select(name="country", id="country", class="custom-select d-block", [(ngModel)]="user.country")
+          .col-6.mb-4
+            label(for="city") City
+          .col-6  
+            select(name="city", id="city", class="custom-select d-block", [(ngModel)]="user.city")
+          .col-6.mb-4
+            label(for="age") Age
+          .col-6
+            input(name="age", id="age", class="form-control", [(ngModel)]="user.age")
+          .col-6.mb-4
+            label(for="gender") Gender
+          .col-6
+            select(name="gender", id="gender", class="custom-select d-block", [(ngModel)]="user.gender")
+              option(*ngFor="let gender of genders", [value]="gender.value") {{gender.name}}
 
-h2 Personal information (optional)
-hr
-label(for="country") Country
- select(name="country", id="country", [(ngModel)]="user.country")
-label(for="city") City
-  select(name="city", id="city", [(ngModel)]="user.city")
-label(for="age") Age
-  select(name="age", id="age", [(ngModel)]="user.age")
-label(for="language") Language
-  select(name="language", id="language", [(ngModel)]="user.language")
-  label(for="gender") Gender
-  select(name="gender", id="gender", [(ngModel)]="user.gender")
-
-hr
-
-dual-list([source]="allServices", [(destination)]="allowedServices")
+    hr
+    .row
+      .col-12
+        dual-list([source]="allServices", [(destination)]="allowedServices")

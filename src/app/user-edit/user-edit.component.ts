@@ -12,7 +12,7 @@ export class UserEditComponent implements OnInit {
     email: '',
     fullname: '',
     country: '',
-    language: '',
+    language: 'Bulgarian',
     city: '',
     age: 0,
     gender: 0
@@ -20,6 +20,10 @@ export class UserEditComponent implements OnInit {
 
   allServices: string[] = ["a", 'v', "4"];
   allowedServices: string[] = ["a", 'v', "4"];
+
+  languages: string[] = ["English", "Bulgarian"]
+
+  genders: Object[] = [{name: "male", value:0},{name: "female", value:1}]
 
   constructor() { }
 
