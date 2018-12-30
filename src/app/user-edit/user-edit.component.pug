@@ -2,11 +2,11 @@ h2 Account
 hr
 
 label(for="user") User
-  input(type="text", id="user", placeholder="user name")
-label(for="email") User
-  input(type="text", id="email", placeholder="email address")
-label(for="name") User
-  input(type="text", id="name", placeholder="full name")
+  input(type="text", id="user", placeholder="user name", [(ngModel)]="user.user")
+label(for="email") Email
+  input(type="text", id="email", placeholder="email address", [(ngModel)]="user.email")
+label(for="name") Full Name
+  input(type="text", id="name", placeholder="full name", [(ngModel)]="user.fullname")
 
 h2 Preffered language
 hr
@@ -14,15 +14,17 @@ select(name="language")
 
 h2 Personal information (optional)
 hr
-label(for="country") User
- select(name="language", id="country")
+label(for="country") Country
+ select(name="country", id="country", [(ngModel)]="user.country")
 label(for="city") City
-  select(name="city", id="city")
+  select(name="city", id="city", [(ngModel)]="user.city")
 label(for="age") Age
-  select(name="age", id="age")
-label(for="user") User
-  select(name="language", id="user")
+  select(name="age", id="age", [(ngModel)]="user.age")
+label(for="language") Language
+  select(name="language", id="language", [(ngModel)]="user.language")
+  label(for="gender") Gender
+  select(name="gender", id="gender", [(ngModel)]="user.gender")
 
 hr
 
-dual-list([source]="source" [(destination)]="confirmed")
+dual-list([source]="allServices", [(destination)]="allowedServices")

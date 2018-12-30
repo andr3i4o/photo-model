@@ -6,5 +6,5 @@ export interface UserModel {
     country: string;
     city: string;
     age: number;
-    sex: number;
+    gender: number;
   }
