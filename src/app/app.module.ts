@@ -7,8 +7,6 @@ import { AngularDualListBoxModule } from 'angular-dual-listbox';
 import { DlDateTimePickerDateModule } from 'angular-bootstrap-datetimepicker';
 
 import { AppComponent } from './app.component';
-import { LoginModule } from './login/login.module';
-import { DashboardModule } from './dashboard/dashboard.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { NeedAuthGuard } from './auth.guard';
@@ -48,13 +46,13 @@ const appRoutes: Routes = [
     AppComponent,
     UserEditComponent,
     NavbarComponent,
-    ReservationsComponent
+    DashboardComponent,
+    ReservationsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    LoginModule,
-    DashboardModule,
     FormsModule,
     HttpClientModule,
     AngularDualListBoxModule,
